@@ -9,7 +9,8 @@ library(ggplot2)
 mtcars
 
 #create plot
-ggplot(mtcars, aes(x = disp, y = mpg)) +
+ggplot(mtcars, aes(x = disp, y = mpg, color = disp)) +
   geom_point() +
+  scale_color_gradient(low = "lightblue", high = "darkblue") +
   labs(title = "Scatterplot of MPG by Displacement", x = "Displacement", y = "MPG") +
   theme_minimal()
